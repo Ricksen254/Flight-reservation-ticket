@@ -7,16 +7,21 @@ session_start(); // Start session to track user login
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flight Booking System</title>
   <style>
     /* General Styles */
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
     }
-    body, html {
+
+    body,
+    html {
       margin: 0;
       padding: 0;
       height: 100%;
@@ -28,9 +33,11 @@ session_start(); // Start session to track user login
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(0, 0, 0, 0.6);  /* Semi-transparent background for header */
+      background: rgba(0, 0, 0, 0.6);
+      /* Semi-transparent background for header */
       z-index: 1000;
     }
+
     .header-inner {
       max-width: 1200px;
       margin: 0 auto;
@@ -39,15 +46,18 @@ session_start(); // Start session to track user login
       align-items: center;
       justify-content: space-between;
     }
+
     header h1 {
       color: rgba(50, 10, 248, 0.868);
       font-size: 24px;
       margin: 0;
     }
+
     nav {
       display: flex;
       gap: 15px;
     }
+
     nav a {
       color: #fff;
       text-decoration: none;
@@ -55,6 +65,7 @@ session_start(); // Start session to track user login
       padding: 8px 12px;
       transition: background 0.3s;
     }
+
     nav a:hover {
       background: #0056b3;
       border-radius: 4px;
@@ -64,6 +75,7 @@ session_start(); // Start session to track user login
     .dropdown {
       position: relative;
     }
+
     .dropdown-content {
       display: none;
       position: absolute;
@@ -71,9 +83,11 @@ session_start(); // Start session to track user login
       min-width: 160px;
       z-index: 1;
     }
+
     .dropdown:hover .dropdown-content {
       display: block;
     }
+
     .dropdown-content a {
       color: white;
       padding: 12px 16px;
@@ -81,6 +95,7 @@ session_start(); // Start session to track user login
       display: block;
       text-align: left;
     }
+
     .dropdown-content a:hover {
       background-color: #575757;
     }
@@ -97,14 +112,17 @@ session_start(); // Start session to track user login
       color: white;
       text-align: center;
       padding: 0 20px;
-      backdrop-filter: blur(5px); /* Apply blur effect to improve readability */
+      backdrop-filter: blur(5px);
+      /* Apply blur effect to improve readability */
     }
+
     .hero h2 {
       font-size: 40px;
       margin-bottom: 20px;
       text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
       font-weight: bold;
     }
+
     .hero p {
       font-size: 22px;
       margin-bottom: 30px;
@@ -112,6 +130,7 @@ session_start(); // Start session to track user login
       line-height: 1.5;
       max-width: 800px;
     }
+
     .hero button {
       padding: 15px 25px;
       background-color: #007bff;
@@ -122,6 +141,7 @@ session_start(); // Start session to track user login
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
+
     .hero button:hover {
       background-color: #0056b3;
     }
@@ -138,14 +158,17 @@ session_start(); // Start session to track user login
       font-size: 14px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
+
     footer a {
       color: #fff;
       text-decoration: none;
       margin: 0 10px;
     }
+
     footer a:hover {
       text-decoration: underline;
     }
+
     .footer-inner {
       max-width: 1200px;
       margin: 0 auto;
@@ -153,20 +176,24 @@ session_start(); // Start session to track user login
       justify-content: space-between;
       align-items: center;
     }
+
     .footer-social-icons {
       display: flex;
       gap: 15px;
     }
+
     .footer-social-icons a {
       font-size: 20px;
       color: #fff;
       transition: color 0.3s ease;
     }
+
     .footer-social-icons a:hover {
       color: #1abc9c;
     }
   </style>
 </head>
+
 <body>
 
   <!-- Header -->
@@ -178,17 +205,17 @@ session_start(); // Start session to track user login
         <a href="flight.php">Book Flight</a>
         <a href="about.html">About Us</a>
         <a href="contact.php">Contact</a>
-       
+
 
         <!-- Account Dropdown -->
         <div class="dropdown">
           <a href="#">Account</a>
           <div class="dropdown-content">
-        
-                <a href="admin_login.php">Admin Dashboard</a>
-              
-                <a href="login.php">User Home</a>
-          
+
+            <a href="admin_login.php">Admin Dashboard</a>
+
+            <a href="index.php">User Home</a>
+
           </div>
         </div>
       </nav>
@@ -218,4 +245,5 @@ session_start(); // Start session to track user login
   </footer>
 
 </body>
+
 </html>
